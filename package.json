@@ -1,11 +1,11 @@
 {
-    "name": "typescript-node-module",
+    "name": "named-pool",
     "version": "1.0.0",
-    "description": "Typescript node module template",
+    "description": "Easy to use named resource pool",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "test": "jest",
-    "repository": "mvaldesdeleon/typescript-node-module",
+    "repository": "mvaldesdeleon/named-pool",
     "keywords": [
         "typescript",
         "node",
