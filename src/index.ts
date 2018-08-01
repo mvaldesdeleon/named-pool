@@ -1,6 +1,6 @@
 interface INamedPoolOptions<A> {
     factory: (key: string) => A;
-    action: (resource: A, ...args: any[]) => any;
+    action: (key: string, resource: A, ...args: any[]) => any;
 }
 
 export default function namedPool<A>(options: INamedPoolOptions<A>) {
@@ -12,7 +12,7 @@ export default function namedPool<A>(options: INamedPoolOptions<A>) {
         }
 
         return function action(...args: any[]) {
-            return options.action(cache[key], ...args);
+            return options.action(key, cache[key], ...args);
         };
     };
 }
